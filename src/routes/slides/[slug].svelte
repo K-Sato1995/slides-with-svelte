@@ -1,7 +1,5 @@
 <script lang='ts'>
 	import Markdoc, { Tag } from '@markdoc/markdoc';
-	import { onMount, afterUpdate } from 'svelte';
-
     interface SlidePage {
         [id: number]: Tag[]
     }
@@ -37,6 +35,7 @@ Markdoc uses a fully declarative approach to composition and flow control, where
 - [Explore the syntax](/docs/syntax)
     `;
 
+
 	const ast = Markdoc.parse(doc);
 	const content = Markdoc.transform(ast) as Tag;
 
@@ -52,10 +51,10 @@ Markdoc uses a fully declarative approach to composition and flow control, where
 		}
 	});
 
-	let pageCounter = 1;
-	let htmlContent = Markdoc.renderers.html(pages[pageCounter]);
 
-	console.log(pages);
+	let pageCounter = 1;
+	$: htmlContent = Markdoc.renderers.html(pages[pageCounter]);
+
 	const nextPage = () => {
 		pageCounter += 1;
 	};
@@ -64,14 +63,9 @@ Markdoc uses a fully declarative approach to composition and flow control, where
 		pageCounter -= 1;
 	};
 
-	afterUpdate(() => {
-		htmlContent = Markdoc.renderers.html(pages[pageCounter]);
-	});
-
 	console.log(htmlContent);
 </script>
 
-{pageCounter}
 {@html htmlContent}
 <button on:click={prevPage}> - </button>
 <button on:click={nextPage}> + </button>
