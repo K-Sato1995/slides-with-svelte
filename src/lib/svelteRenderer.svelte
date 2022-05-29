@@ -1,7 +1,8 @@
-<script>
-	export let children = [];
+<script lang="ts">
+	import type { Tag } from '@markdoc/markdoc';
+
+	export let children: Tag[] = [];
 	export let components = new Map();
-	// export let config
 </script>
 
 {#each children as child}
