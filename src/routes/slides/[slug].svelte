@@ -1,8 +1,11 @@
-<script lang='ts'>
+<script lang="ts">
 	import Markdoc, { Tag } from '@markdoc/markdoc';
-    interface SlidePage {
-        [id: number]: Tag[]
-    }
+	import SvelteButton from '$lib/components/SvelteButton.svelte';
+	import SvelteRenderer from '$lib/svelteRenderer.svelte';
+
+	interface SlidePage {
+		[id: number]: Tag[];
+	}
 
 	const doc = `
 # Heading1 this is title
@@ -21,9 +24,9 @@ content.children.map((child) => {
 \`\`\`
 
 
-{% callout type="check" %}
+{% btn type="check" %}
 Markdoc is open-source—check out its [source](http://github.com/markdoc/markdoc) to see how it works.
-{% /callout %}
+{% /btn %}
 
 # How is Markdoc different?
 
@@ -35,14 +38,30 @@ Markdoc uses a fully declarative approach to composition and flow control, where
 - [Explore the syntax](/docs/syntax)
     `;
 
+	const config = {
+		tags: {
+			btn: {
+				render: 'btn',
+				description: 'Display the enclosed content in a callout box',
+				children: ['paragraph'],
+				attributes: {
+					type: {
+						type: String,
+						default: 'note',
+						matches: ['check', 'error', 'note', 'warning']
+					}
+				}
+			}
+		}
+	};
 
 	const ast = Markdoc.parse(doc);
-	const content = Markdoc.transform(ast) as Tag;
+	const content = Markdoc.transform(ast, config) as Tag;
 
 	let pages: SlidePage = { 0: [] };
 	let nodeCounter = 0;
 
-    content.children.map((child) => {
+	content.children.map((child) => {
 		if (child.name === 'h1') {
 			nodeCounter += 1;
 			pages[nodeCounter] = [child];
@@ -51,9 +70,8 @@ Markdoc uses a fully declarative approach to composition and flow control, where
 		}
 	});
 
-
+	const components = new Map([['btn', SvelteButton]]);
 	let pageCounter = 1;
-	$: htmlContent = Markdoc.renderers.html(pages[pageCounter]);
 
 	const nextPage = () => {
 		pageCounter += 1;
@@ -62,10 +80,9 @@ Markdoc uses a fully declarative approach to composition and flow control, where
 	const prevPage = () => {
 		pageCounter -= 1;
 	};
-
-	console.log(htmlContent);
 </script>
 
-{@html htmlContent}
+<SvelteRenderer children={pages[pageCounter]} {components} />
+
 <button on:click={prevPage}> - </button>
 <button on:click={nextPage}> + </button>
