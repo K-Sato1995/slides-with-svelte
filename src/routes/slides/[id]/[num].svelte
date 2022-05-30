@@ -42,7 +42,32 @@
 </script>
 
 <svelte:window on:keydown={onKeyDown} />
-<SvelteRenderer children={slide} />
+<div class="slide-container">
+	<div class="slide-content">
+		<SvelteRenderer children={slide} />
+	</div>
 
-<button on:click={prevPage}> - </button>
-<button on:click={nextPage}> + </button>
+	<button on:click={prevPage}> - </button>
+	<button on:click={nextPage}> + </button>
+</div>
+
+
+
+<style>
+.slide-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+}
+.slide-content {
+	border: solid 1px;
+    height: 551px;
+    width: 980px;
+    transform: translate(-50%, -50%) scale(1.21633);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+	background-color: #fff;
+}
+</style>
