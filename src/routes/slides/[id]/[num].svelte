@@ -1,25 +1,28 @@
 <script lang="ts">
 	export let slide: any;
-	// import Markdoc, { Tag } from '@markdoc/markdoc';
-	// import SvelteButton from '$lib/components/SvelteButton.svelte';
 	import { components } from '/Users/satokatsuki/WorkSpace/Svelte/slides-with-sveltekit/src/config/markdoc.js';
 	import SvelteRenderer from '$lib/svelteRenderer.svelte';
+	import { page } from '$app/stores';
+	import { goto } from '$app/navigation';
 
-	// interface SlidePage {
-	// 	[id: number]: Tag[];
-	// }
-	// let pageCounter = 1;
+	const params = $page.params;
+	const basePath = $page.url.origin;
+	const { id, num } = params;
 
-	// const nextPage = () => {
-	// 	pageCounter += 1;
-	// };
+	let pageNum = parseInt(num);
 
-	// const prevPage = () => {
-	// 	pageCounter -= 1;
-	// };
+	const nextPage = () => {
+		pageNum += 1;
+		goto(`${basePath}/slides/${id}/${pageNum}`);
+	};
+
+	const prevPage = () => {
+		pageNum -= 1;
+		goto(`${basePath}/slides/${id}/${pageNum}`);
+	};
 </script>
 
 <SvelteRenderer children={slide} {components} />
 
-<!-- <button on:click={prevPage}> - </button>
-<button on:click={nextPage}> + </button> -->
+<button on:click={prevPage}> - </button>
+<button on:click={nextPage}> + </button>
