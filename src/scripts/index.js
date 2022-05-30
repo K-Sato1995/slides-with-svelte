@@ -66,4 +66,4 @@ for (let i = 0; i < slideFiles.length; i++) {
 	});
 }
 
-writeJSON(outputPath, data);
+writeJSON(outputPath, { data: data });
