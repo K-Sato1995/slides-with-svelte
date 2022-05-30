@@ -1,5 +1,7 @@
 <script lang="ts">
 	export let slide: any;
+	export let maxSlideNum: number;
+
 	import { components } from '/Users/satokatsuki/WorkSpace/Svelte/slides-with-sveltekit/src/config/markdoc.js';
 	import SvelteRenderer from '$lib/svelteRenderer.svelte';
 	import { page } from '$app/stores';
@@ -12,13 +14,17 @@
 	let pageNum = parseInt(num);
 
 	const nextPage = () => {
-		pageNum += 1;
-		goto(`${basePath}/slides/${id}/${pageNum}`);
+		if (pageNum < maxSlideNum) {
+			pageNum += 1;
+			goto(`${basePath}/slides/${id}/${pageNum}`);
+		}
 	};
 
 	const prevPage = () => {
-		pageNum -= 1;
-		goto(`${basePath}/slides/${id}/${pageNum}`);
+		if (pageNum > 1) {
+			pageNum -= 1;
+			goto(`${basePath}/slides/${id}/${pageNum}`);
+		}
 	};
 </script>
 

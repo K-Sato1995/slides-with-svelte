@@ -6,10 +6,11 @@ export async function get({ params }) {
 
 	const slideData = data.find((slide) => slide.id == id);
 	const slide = slideData?.slides[slideNum - 1];
+	const maxSlideNum = slideData?.slides.length;
 
 	if (slide) {
 		return {
-			body: { slide }
+			body: { slide, maxSlideNum: maxSlideNum }
 		};
 	}
 
