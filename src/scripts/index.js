@@ -2,7 +2,7 @@ import glob from 'glob';
 import path from 'path';
 import * as fs from 'fs';
 import Markdoc from '@markdoc/markdoc';
-import markdocConfig from '../config/markdoc.js';
+import { markdocConfig } from '../config/markdoc.js';
 import metadataParser from 'markdown-yaml-metadata-parser';
 
 const __dirname = path.resolve();

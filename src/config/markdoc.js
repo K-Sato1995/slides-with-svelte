@@ -1,6 +1,4 @@
-import SvelteButton from '$lib/components/SvelteButton.svelte';
-
-const markdocConfig = {
+export const markdocConfig = {
 	tags: {
 		btn: {
 			render: 'btn',
@@ -16,7 +14,3 @@ const markdocConfig = {
 		}
 	}
 };
-
-export const components = new Map([['btn', SvelteButton]]);
-
-export default markdocConfig;

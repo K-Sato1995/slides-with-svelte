@@ -1,8 +1,6 @@
 <script lang="ts">
 	export let slide: any;
 	export let maxSlideNum: number;
-
-	import { components } from '/Users/satokatsuki/WorkSpace/Svelte/slides-with-sveltekit/src/config/markdoc.js';
 	import SvelteRenderer from '$lib/svelteRenderer.svelte';
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
@@ -44,7 +42,7 @@
 </script>
 
 <svelte:window on:keydown={onKeyDown} />
-<SvelteRenderer children={slide} {components} />
+<SvelteRenderer children={slide} />
 
 <button on:click={prevPage}> - </button>
 <button on:click={nextPage}> + </button>

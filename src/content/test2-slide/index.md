@@ -1,5 +1,5 @@
 ---
-title: Blog Template with Sveltekit
+title: Blog Template with Sveltekit2
 ---
 
 # Heading1 this is title
