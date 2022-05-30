@@ -1,332 +1,308 @@
 [
-  {
-    "1": [
-      {
-        "$$mdtype": "Tag",
-        "name": "h1",
-        "attributes": {},
-        "children": [
-          "Heading1 this is title"
-        ]
-      },
-      {
-        "$$mdtype": "Tag",
-        "name": "p",
-        "attributes": {},
-        "children": [
-          "Markdoc is a Markdown-based syntax and toolchain for creating custom documentation sites. Stripe created Markdoc to power ",
-          {
-            "$$mdtype": "Tag",
-            "name": "a",
-            "attributes": {
-              "href": "http://stripe.com/docs"
-            },
-            "children": [
-              "our public docs"
-            ]
-          },
-          "."
-        ]
-      },
-      {
-        "$$mdtype": "Tag",
-        "name": "p",
-        "attributes": {},
-        "children": [
-          "```ts",
-          " ",
-          "content.children.map((child) => {",
-          " ",
-          "if (child.name === 'h1') {",
-          " ",
-          "nodeCounter += 1;",
-          " ",
-          "pages[nodeCounter] = [child];",
-          " ",
-          "} else {",
-          " ",
-          "pages[nodeCounter].push(child);",
-          " ",
-          "}",
-          " ",
-          "});",
-          " ",
-          "```"
-        ]
-      },
-      {
-        "$$mdtype": "Tag",
-        "name": "btn",
-        "attributes": {
-          "type": "check"
-        },
-        "children": [
-          {
-            "$$mdtype": "Tag",
-            "name": "p",
-            "attributes": {},
-            "children": [
-              "Markdoc is open-source—check out its ",
-              {
-                "$$mdtype": "Tag",
-                "name": "a",
-                "attributes": {
-                  "href": "http://github.com/markdoc/markdoc"
-                },
-                "children": [
-                  "source"
-                ]
-              },
-              " to see how it works."
-            ]
-          }
-        ]
-      }
-    ],
-    "2": [
-      {
-        "$$mdtype": "Tag",
-        "name": "h1",
-        "attributes": {},
-        "children": [
-          "How is Markdoc different?"
-        ]
-      },
-      {
-        "$$mdtype": "Tag",
-        "name": "p",
-        "attributes": {},
-        "children": [
-          "Markdoc uses a fully declarative approach to composition and flow control, where other solutions… ",
-          {
-            "$$mdtype": "Tag",
-            "name": "a",
-            "attributes": {
-              "href": "/docs/overview"
-            },
-            "children": [
-              "Read more"
-            ]
-          },
-          "."
-        ]
-      }
-    ],
-    "3": [
-      {
-        "$$mdtype": "Tag",
-        "name": "h1",
-        "attributes": {},
-        "children": [
-          "Next steps"
-        ]
-      },
-      {
-        "$$mdtype": "Tag",
-        "name": "ul",
-        "attributes": {},
-        "children": [
-          {
-            "$$mdtype": "Tag",
-            "name": "li",
-            "attributes": {},
-            "children": [
-              {
-                "$$mdtype": "Tag",
-                "name": "a",
-                "attributes": {
-                  "href": "/docs/getting-started"
-                },
-                "children": [
-                  "Install Markdoc"
-                ]
-              }
-            ]
-          },
-          {
-            "$$mdtype": "Tag",
-            "name": "li",
-            "attributes": {},
-            "children": [
-              {
-                "$$mdtype": "Tag",
-                "name": "a",
-                "attributes": {
-                  "href": "/docs/syntax"
-                },
-                "children": [
-                  "Explore the syntax"
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "1": [
-      {
-        "$$mdtype": "Tag",
-        "name": "h1",
-        "attributes": {},
-        "children": [
-          "Heading1 this is title"
-        ]
-      },
-      {
-        "$$mdtype": "Tag",
-        "name": "p",
-        "attributes": {},
-        "children": [
-          "Markdoc is a Markdown-based syntax and toolchain for creating custom documentation sites. Stripe created Markdoc to power ",
-          {
-            "$$mdtype": "Tag",
-            "name": "a",
-            "attributes": {
-              "href": "http://stripe.com/docs"
-            },
-            "children": [
-              "our public docs"
-            ]
-          },
-          "."
-        ]
-      },
-      {
-        "$$mdtype": "Tag",
-        "name": "p",
-        "attributes": {},
-        "children": [
-          "```ts",
-          " ",
-          "content.children.map((child) => {",
-          " ",
-          "if (child.name === 'h1') {",
-          " ",
-          "nodeCounter += 1;",
-          " ",
-          "pages[nodeCounter] = [child];",
-          " ",
-          "} else {",
-          " ",
-          "pages[nodeCounter].push(child);",
-          " ",
-          "}",
-          " ",
-          "});",
-          " ",
-          "```"
-        ]
-      },
-      {
-        "$$mdtype": "Tag",
-        "name": "btn",
-        "attributes": {
-          "type": "check"
-        },
-        "children": [
-          {
-            "$$mdtype": "Tag",
-            "name": "p",
-            "attributes": {},
-            "children": [
-              "Markdoc is open-source—check out its ",
-              {
-                "$$mdtype": "Tag",
-                "name": "a",
-                "attributes": {
-                  "href": "http://github.com/markdoc/markdoc"
-                },
-                "children": [
-                  "source"
-                ]
-              },
-              " to see how it works."
-            ]
-          }
-        ]
-      }
-    ],
-    "2": [
-      {
-        "$$mdtype": "Tag",
-        "name": "h1",
-        "attributes": {},
-        "children": [
-          "How is Markdoc different?"
-        ]
-      },
-      {
-        "$$mdtype": "Tag",
-        "name": "p",
-        "attributes": {},
-        "children": [
-          "Markdoc uses a fully declarative approach to composition and flow control, where other solutions… ",
-          {
-            "$$mdtype": "Tag",
-            "name": "a",
-            "attributes": {
-              "href": "/docs/overview"
-            },
-            "children": [
-              "Read more"
-            ]
-          },
-          "."
-        ]
-      }
-    ],
-    "3": [
-      {
-        "$$mdtype": "Tag",
-        "name": "h1",
-        "attributes": {},
-        "children": [
-          "Next steps"
-        ]
-      },
-      {
-        "$$mdtype": "Tag",
-        "name": "ul",
-        "attributes": {},
-        "children": [
-          {
-            "$$mdtype": "Tag",
-            "name": "li",
-            "attributes": {},
-            "children": [
-              {
-                "$$mdtype": "Tag",
-                "name": "a",
-                "attributes": {
-                  "href": "/docs/getting-started"
-                },
-                "children": [
-                  "Install Markdoc"
-                ]
-              }
-            ]
-          },
-          {
-            "$$mdtype": "Tag",
-            "name": "li",
-            "attributes": {},
-            "children": [
-              {
-                "$$mdtype": "Tag",
-                "name": "a",
-                "attributes": {
-                  "href": "/docs/syntax"
-                },
-                "children": [
-                  "Explore the syntax"
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
+	{
+		"id": "blog-template-with-sveltekit",
+		"title": "Blog Template with Sveltekit",
+		"slides": [
+			[
+				{
+					"$$mdtype": "Tag",
+					"name": "h1",
+					"attributes": {},
+					"children": ["Heading1 this is title"]
+				},
+				{
+					"$$mdtype": "Tag",
+					"name": "p",
+					"attributes": {},
+					"children": [
+						"Markdoc is a Markdown-based syntax and toolchain for creating custom documentation sites. Stripe created Markdoc to power ",
+						{
+							"$$mdtype": "Tag",
+							"name": "a",
+							"attributes": {
+								"href": "http://stripe.com/docs"
+							},
+							"children": ["our public docs"]
+						},
+						"."
+					]
+				},
+				{
+					"$$mdtype": "Tag",
+					"name": "p",
+					"attributes": {},
+					"children": [
+						"```ts",
+						" ",
+						"content.children.map((child) => {",
+						" ",
+						"if (child.name === 'h1') {",
+						" ",
+						"nodeCounter += 1;",
+						" ",
+						"pages[nodeCounter] = [child];",
+						" ",
+						"} else {",
+						" ",
+						"pages[nodeCounter].push(child);",
+						" ",
+						"}",
+						" ",
+						"});",
+						" ",
+						"```"
+					]
+				},
+				{
+					"$$mdtype": "Tag",
+					"name": "btn",
+					"attributes": {
+						"type": "check"
+					},
+					"children": [
+						{
+							"$$mdtype": "Tag",
+							"name": "p",
+							"attributes": {},
+							"children": [
+								"Markdoc is open-source—check out its ",
+								{
+									"$$mdtype": "Tag",
+									"name": "a",
+									"attributes": {
+										"href": "http://github.com/markdoc/markdoc"
+									},
+									"children": ["source"]
+								},
+								" to see how it works."
+							]
+						}
+					]
+				},
+				{
+					"$$mdtype": "Tag",
+					"name": "p",
+					"attributes": {},
+					"children": [
+						"Markdoc uses a fully declarative approach to composition and flow control, where other solutions… ",
+						{
+							"$$mdtype": "Tag",
+							"name": "a",
+							"attributes": {
+								"href": "/docs/overview"
+							},
+							"children": ["Read more"]
+						},
+						"."
+					]
+				},
+				{
+					"$$mdtype": "Tag",
+					"name": "ul",
+					"attributes": {},
+					"children": [
+						{
+							"$$mdtype": "Tag",
+							"name": "li",
+							"attributes": {},
+							"children": [
+								{
+									"$$mdtype": "Tag",
+									"name": "a",
+									"attributes": {
+										"href": "/docs/getting-started"
+									},
+									"children": ["Install Markdoc"]
+								}
+							]
+						},
+						{
+							"$$mdtype": "Tag",
+							"name": "li",
+							"attributes": {},
+							"children": [
+								{
+									"$$mdtype": "Tag",
+									"name": "a",
+									"attributes": {
+										"href": "/docs/syntax"
+									},
+									"children": ["Explore the syntax"]
+								}
+							]
+						}
+					]
+				}
+			],
+			[
+				{
+					"$$mdtype": "Tag",
+					"name": "h1",
+					"attributes": {},
+					"children": ["How is Markdoc different?"]
+				}
+			],
+			[
+				{
+					"$$mdtype": "Tag",
+					"name": "h1",
+					"attributes": {},
+					"children": ["Next steps"]
+				}
+			]
+		]
+	},
+	{
+		"id": "blog-template-with-sveltekit",
+		"title": "Blog Template with Sveltekit",
+		"slides": [
+			[
+				{
+					"$$mdtype": "Tag",
+					"name": "h1",
+					"attributes": {},
+					"children": ["Heading1 this is title"]
+				},
+				{
+					"$$mdtype": "Tag",
+					"name": "p",
+					"attributes": {},
+					"children": [
+						"Markdoc is a Markdown-based syntax and toolchain for creating custom documentation sites. Stripe created Markdoc to power ",
+						{
+							"$$mdtype": "Tag",
+							"name": "a",
+							"attributes": {
+								"href": "http://stripe.com/docs"
+							},
+							"children": ["our public docs"]
+						},
+						"."
+					]
+				},
+				{
+					"$$mdtype": "Tag",
+					"name": "p",
+					"attributes": {},
+					"children": [
+						"```ts",
+						" ",
+						"content.children.map((child) => {",
+						" ",
+						"if (child.name === 'h1') {",
+						" ",
+						"nodeCounter += 1;",
+						" ",
+						"pages[nodeCounter] = [child];",
+						" ",
+						"} else {",
+						" ",
+						"pages[nodeCounter].push(child);",
+						" ",
+						"}",
+						" ",
+						"});",
+						" ",
+						"```"
+					]
+				},
+				{
+					"$$mdtype": "Tag",
+					"name": "btn",
+					"attributes": {
+						"type": "check"
+					},
+					"children": [
+						{
+							"$$mdtype": "Tag",
+							"name": "p",
+							"attributes": {},
+							"children": [
+								"Markdoc is open-source—check out its ",
+								{
+									"$$mdtype": "Tag",
+									"name": "a",
+									"attributes": {
+										"href": "http://github.com/markdoc/markdoc"
+									},
+									"children": ["source"]
+								},
+								" to see how it works."
+							]
+						}
+					]
+				},
+				{
+					"$$mdtype": "Tag",
+					"name": "p",
+					"attributes": {},
+					"children": [
+						"Markdoc uses a fully declarative approach to composition and flow control, where other solutions… ",
+						{
+							"$$mdtype": "Tag",
+							"name": "a",
+							"attributes": {
+								"href": "/docs/overview"
+							},
+							"children": ["Read more"]
+						},
+						"."
+					]
+				},
+				{
+					"$$mdtype": "Tag",
+					"name": "ul",
+					"attributes": {},
+					"children": [
+						{
+							"$$mdtype": "Tag",
+							"name": "li",
+							"attributes": {},
+							"children": [
+								{
+									"$$mdtype": "Tag",
+									"name": "a",
+									"attributes": {
+										"href": "/docs/getting-started"
+									},
+									"children": ["Install Markdoc"]
+								}
+							]
+						},
+						{
+							"$$mdtype": "Tag",
+							"name": "li",
+							"attributes": {},
+							"children": [
+								{
+									"$$mdtype": "Tag",
+									"name": "a",
+									"attributes": {
+										"href": "/docs/syntax"
+									},
+									"children": ["Explore the syntax"]
+								}
+							]
+						}
+					]
+				}
+			],
+			[
+				{
+					"$$mdtype": "Tag",
+					"name": "h1",
+					"attributes": {},
+					"children": ["How is Markdoc different?"]
+				}
+			],
+			[
+				{
+					"$$mdtype": "Tag",
+					"name": "h1",
+					"attributes": {},
+					"children": ["Next steps"]
+				}
+			]
+		]
+	}
 ]

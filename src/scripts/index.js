@@ -3,6 +3,7 @@ import path from 'path';
 import * as fs from 'fs';
 import Markdoc from '@markdoc/markdoc';
 import markdocConfig from '../config/markdoc.js';
+import metadataParser from 'markdown-yaml-metadata-parser';
 
 const __dirname = path.resolve();
 const contentPath = path.join(__dirname, 'src/content');
@@ -22,17 +23,27 @@ const writeJSON = (outputPath, jsonObj) => {
 	});
 };
 
+const generateIdFromTitle = (title) => {
+	const lowercased = title.toLowerCase();
+	return lowercased.split(' ').join('-');
+};
+
 const buildSlide = (doc) => {
-	let pages = {};
+	let pages = [];
 	let nodeCounter = 0;
 
 	const ast = Markdoc.parse(doc);
 	const content = Markdoc.transform(ast, markdocConfig);
 
 	content.children.map((child) => {
+		console.log(nodeCounter);
+		console.log(pages);
 		if (child.name === 'h1') {
-			nodeCounter += 1;
-			pages[nodeCounter] = [child];
+			pages.push([child]);
+			// FIXME: hmmmmmmmmm
+			if (nodeCounter !== 0) {
+				nodeCounter += 1;
+			}
 		} else {
 			pages[nodeCounter].push(child);
 		}
@@ -49,7 +60,13 @@ for (let i = 0; i < slideFiles.length; i++) {
 	const mdFile = slideFiles[i];
 	const mdText = fs.readFileSync(mdFile).toString();
 	const pages = buildSlide(mdText);
-	data.push(pages);
+	const metaData = metadataParser(mdText);
+
+	data.push({
+		id: generateIdFromTitle(metaData.metadata.title),
+		title: metaData.metadata.title,
+		slides: pages
+	});
 }
 
 writeJSON(outputPath, data);
