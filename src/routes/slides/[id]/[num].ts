@@ -1,6 +1,13 @@
 import { data } from '$lib/data/slides.json';
 
-export async function get({ params }) {
+type SlideParams = {
+	params: {
+		num: number;
+		id: string;
+	};
+};
+
+export async function get({ params }: SlideParams) {
 	const id = params.id;
 	const slideNum = params.num;
 

@@ -26,8 +26,24 @@
 			goto(`${basePath}/slides/${id}/${pageNum}`);
 		}
 	};
+
+	const onKeyDown = (event: KeyboardEvent) => {
+		if (event.repeat) return;
+		switch (event.key) {
+			case 'ArrowLeft':
+				event.preventDefault();
+				prevPage();
+				break;
+
+			case 'ArrowRight':
+				event.preventDefault();
+				nextPage();
+				break;
+		}
+	};
 </script>
 
+<svelte:window on:keydown={onKeyDown} />
 <SvelteRenderer children={slide} {components} />
 
 <button on:click={prevPage}> - </button>
