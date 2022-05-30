@@ -36,16 +36,13 @@ const buildSlide = (doc) => {
 	const content = Markdoc.transform(ast, markdocConfig);
 
 	content.children.map((child) => {
-		console.log(nodeCounter);
-		console.log(pages);
+		// console.log(nodeCounter);
+		// console.log(pages);
 		if (child.name === 'h1') {
 			pages.push([child]);
-			// FIXME: hmmmmmmmmm
-			if (nodeCounter !== 0) {
-				nodeCounter += 1;
-			}
+			nodeCounter += 1;
 		} else {
-			pages[nodeCounter].push(child);
+			pages[nodeCounter - 1].push(child);
 		}
 	});
 
