@@ -35,6 +35,8 @@
 	"type": "module",
 	"dependencies": {
 		"@markdoc/markdoc": "^0.1.2",
-		"prismjs": "^1.28.0"
+		"prismjs": "^1.28.0",
+		"screenfull": "^6.0.1",
+		"svelte-fullscreen": "^2.0.0"
 	}
 }

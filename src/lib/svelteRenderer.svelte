@@ -4,7 +4,6 @@
 
 	export let children: Tag[] = [];
 	export const components = new Map([['btn', SvelteButton]]);
-
 </script>
 
 {#each children as child}
