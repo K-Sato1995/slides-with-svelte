@@ -65,17 +65,20 @@
 		width: 100%;
 		height: 100%;
 		background-color: #000;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	.slide-content {
+		padding: 2rem;
 		border: solid 1px;
 		height: 551px;
 		width: 980px;
-		transform: translate(-50%, -50%) scale(1.21633);
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		background-color: #fff;
+		/* transform: scale(1.2); */
+		background-color: #fff;	
 	}
+
 	.control-panel {
 		width: 100%;
 		height: 100px;
